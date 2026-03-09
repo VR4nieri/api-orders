@@ -1,0 +1,39 @@
+### Criar um novo pedido
+POST http://localhost:3000/order
+Content-Type: application/json
+
+{
+  "numeroPedido": "v10089015vdb-01",
+  "valorTotal": 10000,
+  "dataCriacao": "2023-07-19T12:24:11.529Z",
+  "items": [
+    {
+      "idItem": "2434",
+      "quantidadeItem": 1,
+      "valorItem": 1000
+    }
+  ]
+}
+
+### Obter pedido por ID
+GET http://localhost:3000/order/v10089015vdb-01
+Content-Type: application/json
+
+### Atualizar pedido
+PUT http://localhost:3000/order/v10089015vdb-01
+Content-Type: application/json
+
+{
+  "valorTotal": 12000,
+  "items": [
+    {
+      "productId": 2434,
+      "quantity": 2,
+      "price": 6000
+    }
+  ]
+}
+
+### Deletar pedido
+DELETE http://localhost:3000/order/v10089015vdb-01
+Content-Type: application/json
